@@ -1073,7 +1073,7 @@ button {
   flex-direction: column;
   justify-content: space-between;
   padding: 72px 16px 24px 16px;
-  display: none !important;
+
 }
 
 .close-btn {
