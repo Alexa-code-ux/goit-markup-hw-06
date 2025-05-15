@@ -470,8 +470,6 @@ button {
 .section-two-list {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
   gap: 72px 24px;
 }
 
@@ -500,7 +498,7 @@ button {
   }
 
   .advantages {
-    flex-basis: calc((100% - 72px) / 2);
+    flex-basis: calc((100% - 24px) / 2);
   }
 
   .section-two-title {
@@ -547,7 +545,9 @@ button {
 .container-three {
   text-align: center;
 }
-
+.section {
+  display: flex;
+}
 .section-three {
   padding: 96px 0;
   background-color: #f4f4fd;
@@ -566,7 +566,6 @@ button {
   border-radius: 0 0 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  flex-basis: calc((100% - 72px) / 4);
 }
 
 .names {
@@ -642,6 +641,9 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 64px 24px;
+    justify-content: center;
+    align-items: center;
+    flex-basis: calc((100% - 24px) / 2);
   }
 }
 
@@ -652,6 +654,10 @@ button {
 
   .section-three-list {
     gap: 24px;
+  }
+
+  .section-three-item {
+    flex-basis: calc((100% - 72px) / 4);
   }
 }
 /* section 4 */
@@ -802,7 +808,8 @@ button {
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-right: 120px;
+  padding-bottom: 72px;
+
 }
 
 .logo-footer {
@@ -814,6 +821,7 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  text-align: center;
 }
 
 .footer-par {
@@ -821,7 +829,6 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  max-width: 288px;
   text-align: left;
 }
 
@@ -867,8 +874,8 @@ button {
 
 .footer-form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
   gap: 24px;
 }
 
@@ -897,8 +904,8 @@ button {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-left: 80px;
   color: #fff;
+  padding-bottom: 16px;
 }
 
 .footer-btn {
@@ -932,6 +939,13 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+  .content-footer {
+    margin-right: 120px;
+  }
+  .footer-main {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
   .footer-logo {
     flex-direction: row;
     flex-wrap: wrap;
@@ -941,7 +955,8 @@ button {
   }
 
   .footer-logo container {
-    align-items: flex-start;
+    display: flex;
+    align-items: baseline;
 
     margin-bottom: 24px;
     margin-left: 108px;
@@ -969,8 +984,16 @@ button {
 @media screen and (min-width: 1158px) {
   .footer-main {
     padding: 100px 0;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 0;
   }
-
+  .subscribe-footer {
+    margin-left: auto;
+  }
+  .content-footer {
+    margin-right: 120px;
+  }
   .footer-logo container {
     margin-right: 120px;
     margin-left: 0;
@@ -979,6 +1002,7 @@ button {
 
   .logo-footer {
     margin-bottom: none;
+    text-align: left;
   }
 
   .icons-footer {
@@ -1049,6 +1073,7 @@ button {
   flex-direction: column;
   justify-content: space-between;
   padding: 72px 16px 24px 16px;
+  display: none !important;
 }
 
 .close-btn {
@@ -1237,7 +1262,7 @@ button {
   background-color: #404bbf;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .modal {
     width: 408px;
     min-height: 584px;
